@@ -1,6 +1,6 @@
 import createDataContext from "./createDataContext";
 import * as PhotoService from "../api/photo";
-import defaultMessages from "../assets/data/default-messages.json";
+import defaultTexts from "../assets/data/default-texts.json";
 import { CONSTANTS } from "../config/configurations";
 
 const initialState = {
@@ -65,10 +65,10 @@ function getPhotos(dispatch) {
           }
         });
       } else {
-        dispatch({ type: "setErrorMessage", payload: response?.message ?? defaultMessages.error });
+        dispatch({ type: "setErrorMessage", payload: response?.message ?? defaultTexts.error });
       }
     } catch (error) {
-      dispatch({ type: "setErrorMessage", payload: error?.message ?? defaultMessages.error });
+      dispatch({ type: "setErrorMessage", payload: error?.message ?? defaultTexts.error });
     } finally {
       dispatch({ type: "setRefreshing", payload: false });
 
@@ -83,7 +83,7 @@ function getPhotos(dispatch) {
 
 function handleSearch(dispatch) {
   return (text, photoListContext, callback) => {
-    const { state } = photoListContext;
+    const { index, count } = photoListContext.state;
 
     dispatch({ type: "setKeyword", payload: text });
 
@@ -93,7 +93,7 @@ function handleSearch(dispatch) {
 
     searchWaiting = setTimeout(() => {
       searchWaiting = null;
-      photoListContext.getPhotos(true, state, text);
+      photoListContext.getPhotos(true, index, count, text);
     }, CONSTANTS.FILTER_SEARCH_DELAY_MS);
 
     callback?.();

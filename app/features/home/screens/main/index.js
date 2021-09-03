@@ -3,6 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import PhotoList from "../../components/photo-list";
 import { Context as AccountContext } from "../../../../context/AccountContext";
 import Styles from "../../../../config/styles";
+import PhotoSearchInput from "../../components/photo-search-input";
 
 const HomeScreen = ({ navigation = {} }) => {
   const accountContext = useContext(AccountContext);
@@ -15,6 +16,7 @@ const HomeScreen = ({ navigation = {} }) => {
 
   return (
     <SafeAreaView style={Styles.f1}>
+      <PhotoSearchInput />
       <PhotoList />
     </SafeAreaView>
   );
