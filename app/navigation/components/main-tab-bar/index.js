@@ -20,6 +20,7 @@ const MainTabBarComponent = ({ state, descriptors, navigation }) => {
     <View
       style={[
         Styles.fdRow,
+        Styles.shadowForWhite,
         CONSTANTS.isMobileSize
           ? CONSTANTS.hasNotch
             ? [Styles.pb30, Styles.pt10, Styles.ph0]

@@ -49,7 +49,7 @@ const App = () => {
 
   if (initializeState) {
     return (
-      <View style={[Styles.f1, Styles.fajCenterItem]}>
+      <View style={[Styles.f1, Styles.ajCenter]}>
         <ActivityIndicator />
       </View>
     );

@@ -3,7 +3,7 @@ import { API_URL, API_KEY } from "@env";
 
 export async function getPhotos(index = 1, count = 15, keyword = null) {
   const response = await fetch(
-    `${API_URL}services/rest/?method=flickr.photos.search&api_key=${API_KEY}&format=json&nojsoncallback=1&page=${index}&per_page=${count}&extras=description,date_upload,owner_name&text=${keyword}`,
+    `${API_URL}services/rest/?method=flickr.photos.search&api_key=${API_KEY}&format=json&nojsoncallback=1&page=${index}&per_page=${count}&extras=description,date_upload,owner_name&safe_search=1&text=${keyword}`,
     {
       headers: {
         "Content-Type": "application/json",

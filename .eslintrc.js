@@ -30,7 +30,7 @@ module.exports = {
     "react/jsx-max-props-per-line": ["warn", { maximum: 1, when: "multiline" }],
     "react/destructuring-assignment": "warn",
     "consistent-return": "off",
-    "import/prefer-default-export": "warn"
+    "import/prefer-default-export": "off"
   },
   globals: {
     fetch: false
