@@ -1,0 +1,9 @@
+{
+  "AUTH_STACK": "Auth",
+  "LOGIN_SCREEN": "LoginScreen",
+  "MAIN_TAB": "Main",
+  "HOME_STACK": "Home",
+  "HOME_MAIN_SCREEN": "Home_Main",
+  "PROFILE_STACK": "Profile",
+  "PROFILE_MAIN_SCREEN": "Profile_Main"
+}
