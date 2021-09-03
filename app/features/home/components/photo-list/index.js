@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { View, FlatList, ActivityIndicator, RefreshControl, Text } from "react-native";
 import NotFound from "../../../../components/not-found";
+import PhotoListItem from "../photo-list-item";
 import useIsMounted from "../../../../hooks/useIsMounted";
 import { Context as PhotoListContext } from "../../../../context/PhotoListContext";
 import Styles from "../../../../config/styles";
@@ -11,7 +12,15 @@ const PhotoList = () => {
   const isMounted = useIsMounted();
 
   const photoListContext = useContext(PhotoListContext);
-  const { initialized, refreshing, index, count, keyword, photos } = photoListContext.state;
+  const {
+    initialized,
+    refreshing,
+    errorMessage,
+    index,
+    count,
+    keyword,
+    photos
+  } = photoListContext.state;
 
   useEffect(() => {
     photoListContext.getPhotos(true, index, count, keyword);
@@ -19,7 +28,13 @@ const PhotoList = () => {
     return () => photoListContext.resetContext();
   }, []);
 
-  if (initialized === false && refreshing) {
+  if (errorMessage) {
+    <View style={Styles.mt30}>
+      <Text style={Styles.errorText}>{errorMessage}</Text>
+    </View>;
+  }
+
+  if (!initialized && refreshing) {
     return (
       <View style={Styles.mt30}>
         <ActivityIndicator size="large" color={Colors.primary} />
@@ -30,8 +45,9 @@ const PhotoList = () => {
   return (
     <>
       <NotFound visible={initialized && photos.length === 0} />
+
       <FlatList
-        style={[Styles.mt10, Styles.f0]}
+        style={[Styles.mt10, Styles.f1]}
         data={photos}
         showsVerticalScrollIndicator={false}
         refreshControl={
@@ -57,7 +73,7 @@ const PhotoList = () => {
           isMounted.current && setonEndReachedCalledDuringMomentum(false)
         }
         keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => <Text>{JSON.stringify(item)}</Text>}
+        renderItem={({ item }) => <PhotoListItem photo={item} />}
       />
     </>
   );

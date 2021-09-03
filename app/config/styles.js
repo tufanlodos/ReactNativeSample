@@ -30,6 +30,10 @@ export default StyleSheet.create({
     textAlign: "center",
     color: Colors.grey
   },
+  errorText: {
+    textAlign: "center",
+    color: Colors.red
+  },
   fwNormal: {
     fontWeight: "normal"
   },
