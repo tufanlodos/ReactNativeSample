@@ -5,7 +5,7 @@ import { Context as AccountContext } from "../../../../context/AccountContext";
 import * as Controller from "./controller";
 import Styles from "../../../../config/styles";
 
-const Stack4Screen = ({ navigation }) => {
+const ProfileScreen = ({ navigation }) => {
   const accountContext = useContext(AccountContext);
 
   return (
@@ -18,4 +18,4 @@ const Stack4Screen = ({ navigation }) => {
   );
 };
 
-export default Stack4Screen;
+export default ProfileScreen;

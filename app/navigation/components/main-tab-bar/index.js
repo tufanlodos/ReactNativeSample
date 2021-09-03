@@ -3,12 +3,12 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
 import ROUTE_NAMES from "../../config/route-names.json";
-import { ENV } from "../../../config/configurations";
+import { CONSTANTS } from "../../../config/configurations";
 import Colors from "../../../assets/data/color-list.json";
 import Styles from "../../../config/styles";
 import OwnStyles from "./styles";
 
-const mainTabBarIconSize = ENV.isMobileSize ? 18 : 22;
+const mainTabBarIconSize = CONSTANTS.isMobileSize ? 18 : 22;
 
 const MainTabBarComponent = ({ state, descriptors, navigation }) => {
   const focusedOptions = descriptors[state.routes[state.index].key].options;
@@ -20,8 +20,8 @@ const MainTabBarComponent = ({ state, descriptors, navigation }) => {
     <View
       style={[
         Styles.fdRow,
-        ENV.isMobileSize
-          ? ENV.hasNotch
+        CONSTANTS.isMobileSize
+          ? CONSTANTS.hasNotch
             ? [Styles.pb30, Styles.pt10, Styles.ph0]
             : [Styles.pv15]
           : [Styles.pv15],

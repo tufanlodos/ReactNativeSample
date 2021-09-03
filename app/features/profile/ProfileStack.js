@@ -2,8 +2,8 @@ import React from "react";
 import { Platform } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Icon from "react-native-vector-icons/Feather";
+import ProfileScreen from "./screens/main/index";
 import ROUTE_NAMES from "../../navigation/config/route-names.json";
-import Stack4Screen from "./screens/main/index";
 import Styles from "../../config/styles";
 
 const Stack = createStackNavigator();
@@ -26,7 +26,7 @@ const ProfileStack = () => (
       )
     }}
   >
-    <Stack.Screen name={ROUTE_NAMES.PROFILE_MAIN_SCREEN} component={Stack4Screen} />
+    <Stack.Screen name={ROUTE_NAMES.PROFILE_MAIN_SCREEN} component={ProfileScreen} />
   </Stack.Navigator>
 );
 
