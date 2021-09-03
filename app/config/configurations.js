@@ -1,7 +1,7 @@
 import { Dimensions, PixelRatio } from "react-native";
 import { hasNotch } from "react-native-device-info";
 
-const ENV = {
+const CONSTANTS = {
   deviceWidth: Dimensions.get("window").width,
   deviceHeight: Dimensions.get("window").height,
   diagonalScreenSize:
@@ -9,7 +9,8 @@ const ENV = {
   mobileBreakPoint: 600, // alcatel 1T 7" width
   isMobileSize:
     (Dimensions.get("window").width * Dimensions.get("window").scale) / PixelRatio.get() < 600,
-  hasNotch: hasNotch()
+  hasNotch: hasNotch(),
+  FILTER_SEARCH_DELAY_MS: 1000
 };
 
 const ASYNC_STORAGE_KEYS = {
@@ -17,4 +18,4 @@ const ASYNC_STORAGE_KEYS = {
 };
 
 // eslint-disable-next-line import/prefer-default-export
-export { ENV, ASYNC_STORAGE_KEYS };
+export { CONSTANTS, ASYNC_STORAGE_KEYS };

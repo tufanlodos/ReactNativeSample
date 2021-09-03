@@ -1,7 +1,7 @@
-import { ENV } from "../config/configurations";
+import { CONSTANTS } from "../config/configurations";
 
 const widthPercentageToDP = (percentage) => {
-  const screenWidth = ENV.deviceWidth;
+  const screenWidth = CONSTANTS.deviceWidth;
   if (percentage && screenWidth) {
     return (screenWidth * Number(percentage.replace("%", ""))) / 100;
   }
@@ -10,7 +10,7 @@ const widthPercentageToDP = (percentage) => {
 };
 
 const heightPercentageToDP = (percentage) => {
-  const screenHeight = ENV.deviceHeight;
+  const screenHeight = CONSTANTS.deviceHeight;
   if (percentage && screenHeight) {
     return (screenHeight * Number(percentage.replace("%", ""))) / 100;
   }
@@ -19,7 +19,7 @@ const heightPercentageToDP = (percentage) => {
 };
 
 const diagonalPercentageToDP = (percentage) => {
-  const screenDiagonal = ENV.diagonalScreenSize;
+  const screenDiagonal = CONSTANTS.diagonalScreenSize;
   if (percentage && screenDiagonal) {
     return (screenDiagonal * Number(percentage.replace("%", ""))) / 100;
   }

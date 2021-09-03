@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Dimensions } from "react-native";
-import { ENV } from "../config/configurations";
+import { CONSTANTS } from "../config/configurations";
 
 export default () => {
   const [screenData, setScreenData] = useState(Dimensions.get("window"));
@@ -18,6 +18,6 @@ export default () => {
   return {
     ...screenData,
     isLandscape: screenData.width > screenData.height,
-    scale: screenData.width / ENV.deviceWidth
+    scale: screenData.width / CONSTANTS.deviceWidth
   };
 };

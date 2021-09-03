@@ -1,8 +1,9 @@
 import { Platform, StyleSheet } from "react-native";
 import Colors from "../assets/data/color-list.json";
-import { ENV } from "./configurations";
+import { CONSTANTS } from "./configurations";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "../lib/responsive";
 
+// TODO toparla
 export default StyleSheet.create({
   f0: {
     flex: 0
@@ -23,6 +24,10 @@ export default StyleSheet.create({
     color: Colors.primary
   },
   textGrey: {
+    color: Colors.grey
+  },
+  notFoundText: {
+    textAlign: "center",
     color: Colors.grey
   },
   fwNormal: {
@@ -158,10 +163,10 @@ export default StyleSheet.create({
     marginRight: 20
   },
   screenDefaultPadding: {
-    paddingHorizontal: ENV.isMobileSize ? wp("%1.2") : 20,
+    paddingHorizontal: CONSTANTS.isMobileSize ? wp("%1.2") : 20,
     marginTop: Platform.OS === "android" ? 20 : 0,
-    paddingTop: ENV.hasNotch ? -25 : 0,
-    paddingBottom: ENV.hasNotch ? -35 : 0
+    paddingTop: CONSTANTS.hasNotch ? -25 : 0,
+    paddingBottom: CONSTANTS.hasNotch ? -35 : 0
   },
   screenDefaultMargin: {
     marginVertical: 10,
