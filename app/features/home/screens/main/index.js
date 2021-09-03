@@ -1,6 +1,6 @@
-import React, { useEffect, useContext } from "react";
-import { Text } from "react-native";
+import React, { useContext, useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import PhotoList from "../../../../components/photo-list";
 import { Context as AccountContext } from "../../../../context/AccountContext";
 import Styles from "../../../../config/styles";
 
@@ -15,7 +15,7 @@ const HomeScreen = ({ navigation = {} }) => {
 
   return (
     <SafeAreaView style={Styles.f1}>
-      <Text>Home</Text>
+      <PhotoList />
     </SafeAreaView>
   );
 };
