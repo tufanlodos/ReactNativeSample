@@ -29,6 +29,7 @@ function PhotoSearchInput() {
             photoListContext.handleSearch(text, photoListContext);
           }}
           placeholderTextColor={Colors.grey}
+          returnKeyType="done"
         />
       </View>
 
