@@ -7,7 +7,6 @@
 - React Navigation 5 (includes stack and bottom-tabs)
 - React Native Async Storage
 - React Native Device Info
-- React Native Root Toast
 - React Native Vector Icons
 - ESLint & Prettier configurations
 - Context for Orientation

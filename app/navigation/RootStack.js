@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, ActivityIndicator, StatusBar } from "react-native";
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { RootSiblingParent } from "react-native-root-siblings";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -57,19 +56,17 @@ const App = () => {
 
   return (
     <ErrorBoundary>
-      <RootSiblingParent>
-        <AccountProvider>
-          <SafeAreaProvider>
-            <NavigationContainer ref={navigationRef} theme={AppTheme}>
-              <StatusBar backgroundColor={Colors.white} barStyle="dark-content" />
-              <RootStack.Navigator initialRouteName={initialRouteName} headerMode="none">
-                <RootStack.Screen name={ROUTE_NAMES.AUTH_STACK} component={AuthStack} />
-                <RootStack.Screen name={ROUTE_NAMES.MAIN_TAB} component={MainTab} />
-              </RootStack.Navigator>
-            </NavigationContainer>
-          </SafeAreaProvider>
-        </AccountProvider>
-      </RootSiblingParent>
+      <AccountProvider>
+        <SafeAreaProvider>
+          <NavigationContainer ref={navigationRef} theme={AppTheme}>
+            <StatusBar backgroundColor={Colors.white} barStyle="dark-content" />
+            <RootStack.Navigator initialRouteName={initialRouteName} headerMode="none">
+              <RootStack.Screen name={ROUTE_NAMES.AUTH_STACK} component={AuthStack} />
+              <RootStack.Screen name={ROUTE_NAMES.MAIN_TAB} component={MainTab} />
+            </RootStack.Navigator>
+          </NavigationContainer>
+        </SafeAreaProvider>
+      </AccountProvider>
     </ErrorBoundary>
   );
 };
