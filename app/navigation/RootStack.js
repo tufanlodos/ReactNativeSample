@@ -26,7 +26,7 @@ const App = () => {
     ...DefaultTheme,
     colors: {
       ...DefaultTheme.colors,
-      background: Colors.brighter
+      background: Colors.bright
     }
   };
 

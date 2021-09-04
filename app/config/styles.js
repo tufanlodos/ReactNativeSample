@@ -3,7 +3,6 @@ import Colors from "../assets/data/color-list.json";
 import { CONSTANTS } from "./configurations";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "../lib/responsive";
 
-// TODO toparla
 export default StyleSheet.create({
   f0: {
     flex: 0
@@ -82,7 +81,7 @@ export default StyleSheet.create({
     fontWeight: "bold",
     fontSize: 22,
     marginLeft: 10,
-    color: Colors.secondaryDark
+    color: Colors.secondary
   },
   shadowForWhite: {
     shadowColor: Colors.secondary,
@@ -96,6 +95,12 @@ export default StyleSheet.create({
   },
   screenHorizontalPadding: {
     paddingHorizontal: 10
+  },
+  iosNotchBalancer: {
+    paddingVertical: Platform.OS === "ios" && CONSTANTS.hasNotch ? -30 : null
+  },
+  ph5: {
+    paddingHorizontal: 7.5
   },
   ml10: {
     marginLeft: 10
@@ -117,8 +122,5 @@ export default StyleSheet.create({
     bottom: 10,
     right: 10,
     left: 10
-  },
-  iosNotchBalancer: {
-    paddingVertical: Platform.OS === "ios" && CONSTANTS.hasNotch ? -30 : null
   }
 });

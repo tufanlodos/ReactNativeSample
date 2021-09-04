@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     lineHeight: 21,
     marginVertical: 5,
-    color: Colors.black,
+    color: Colors.secondary,
     textAlign: "center"
   },
   errorCodeContainer: {
