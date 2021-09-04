@@ -11,7 +11,7 @@ const initialState = {
   photos: [],
   totalCount: null,
   index: 1,
-  count: 15,
+  count: 30,
   keyword: null
 };
 

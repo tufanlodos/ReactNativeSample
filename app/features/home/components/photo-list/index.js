@@ -75,7 +75,7 @@ const PhotoList = () => {
             () => isMounted.current && setonEndReachedCalledDuringMomentum(true)
           )
         }
-        onEndReachedThreshold={0.1}
+        onEndReachedThreshold={10}
         onMomentumScrollBegin={() =>
           isMounted.current && setonEndReachedCalledDuringMomentum(false)
         }
