@@ -3,6 +3,7 @@ import { Platform } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Icon from "react-native-vector-icons/Feather";
 import HomeScreen from "./screens/main/index";
+import DetailScreen from "./screens/detail/index";
 import { Provider as PhotoListProvider } from "../../context/PhotoListContext";
 import ROUTE_NAMES from "../../navigation/config/route-names.json";
 import Styles from "../../config/styles";
@@ -30,6 +31,7 @@ const HomeStack = () => (
       }}
     >
       <Stack.Screen name={ROUTE_NAMES.HOME_MAIN_SCREEN} component={HomeScreen} />
+      <Stack.Screen name={ROUTE_NAMES.HOME_DETAIL_SCREEN} component={DetailScreen} />
     </Stack.Navigator>
   </PhotoListProvider>
 );

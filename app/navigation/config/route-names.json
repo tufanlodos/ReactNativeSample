@@ -4,6 +4,7 @@
   "MAIN_TAB": "Main",
   "HOME_STACK": "Home",
   "HOME_MAIN_SCREEN": "Home_Main",
+  "HOME_DETAIL_SCREEN": "Home_Detail",
   "PROFILE_STACK": "Profile",
   "PROFILE_MAIN_SCREEN": "Profile_Main"
 }
