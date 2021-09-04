@@ -17,18 +17,7 @@ const MainTabBarComponent = ({ state, descriptors, navigation }) => {
   }
 
   return (
-    <View
-      style={[
-        Styles.fdRow,
-        Styles.shadowForWhite,
-        CONSTANTS.isMobileSize
-          ? CONSTANTS.hasNotch
-            ? [Styles.pb30, Styles.pt10, Styles.ph0]
-            : [Styles.pv15]
-          : [Styles.pv15],
-        Styles.bgWhite
-      ]}
-    >
+    <View style={[OwnStyles.container, Styles.shadowForWhite]}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
 
@@ -47,13 +36,8 @@ const MainTabBarComponent = ({ state, descriptors, navigation }) => {
         };
 
         return (
-          <TouchableOpacity
-            style={[Styles.f1, Styles.fdCol, Styles.algiCenter, Styles.jcCenter]}
-            key={route.key}
-            onPress={onPress}
-            // onLongPress={onLongPress}
-          >
-            <View style={[Styles.fdCol, Styles.jcCenter, Styles.algiCenter, OwnStyles.mb3]}>
+          <TouchableOpacity style={OwnStyles.tabButtonContainer} key={route.key} onPress={onPress}>
+            <View style={OwnStyles.tabButtonView}>
               {route.name === ROUTE_NAMES.HOME_STACK && (
                 <Icon
                   size={mainTabBarIconSize}

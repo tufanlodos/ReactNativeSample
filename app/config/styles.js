@@ -1,6 +1,5 @@
-import { Platform, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import Colors from "../assets/data/color-list.json";
-import { CONSTANTS } from "./configurations";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "../lib/responsive";
 
 // TODO toparla
@@ -59,9 +58,6 @@ export default StyleSheet.create({
   jcCenter: {
     justifyContent: "center"
   },
-  jcEnd: {
-    justifyContent: "flex-end"
-  },
   algiCenter: {
     alignItems: "center"
   },
@@ -84,19 +80,8 @@ export default StyleSheet.create({
   headerTitleStyle: {
     fontWeight: "bold",
     fontSize: 22,
-    textAlign: "left",
     marginLeft: 10,
     color: Colors.secondaryDark
-  },
-  screenDefaultPadding: {
-    paddingHorizontal: CONSTANTS.isMobileSize ? wp("%1.2") : 20,
-    marginTop: Platform.OS === "android" ? 20 : 0,
-    paddingTop: CONSTANTS.hasNotch ? -25 : 0,
-    paddingBottom: CONSTANTS.hasNotch ? -35 : 0
-  },
-  screenDefaultMargin: {
-    marginVertical: 10,
-    marginHorizontal: 20
   },
   shadowForWhite: {
     shadowColor: Colors.secondary,
@@ -108,32 +93,8 @@ export default StyleSheet.create({
     shadowRadius: 4,
     elevation: 2
   },
-  mt5: {
-    marginTop: 5
-  },
-  mt10: {
-    marginTop: 10
-  },
-  mt20: {
-    marginTop: 20
-  },
-  mb20: {
-    marginBottom: 20
-  },
-  mb10: {
-    marginBottom: 10
-  },
-  mb5: {
-    marginBottom: 5
-  },
-  mr5: {
-    marginRight: 5
-  },
-  mr10: {
-    marginRight: 10
-  },
-  mr15: {
-    marginRight: 15
+  screenHorizontalPadding: {
+    paddingHorizontal: 10
   },
   ml10: {
     marginLeft: 10
@@ -141,95 +102,8 @@ export default StyleSheet.create({
   ml15: {
     marginLeft: 15
   },
-  mln5: {
-    marginLeft: -5
-  },
-  mh10: {
-    marginHorizontal: 10
-  },
-  mv10: {
-    marginVertical: 10
-  },
   mt30: {
     marginTop: 30
-  },
-  mb30: {
-    marginBottom: 30
-  },
-  mb40: {
-    marginBottom: 40
-  },
-  mr30: {
-    marginRight: 30
-  },
-  ml30: {
-    marginLeft: 30
-  },
-  ml20: {
-    marginLeft: 20
-  },
-  mh30: {
-    marginHorizontal: 30
-  },
-  mv30: {
-    marginVertical: 30
-  },
-  pt10: {
-    paddingTop: 10
-  },
-  pb10: {
-    paddingBottom: 10
-  },
-  pr10: {
-    paddingRight: 10
-  },
-  pl10: {
-    paddingLeft: 10
-  },
-  ph0: {
-    paddingHorizontal: 0
-  },
-  ph5: {
-    paddingHorizontal: 5
-  },
-  ph10: {
-    paddingHorizontal: 10
-  },
-  pv10: {
-    paddingVertical: 10
-  },
-  ph20: {
-    paddingHorizontal: 20
-  },
-  pv20: {
-    paddingVertical: 20
-  },
-  pv15: {
-    paddingVertical: 15
-  },
-  pv5: {
-    paddingVertical: 5
-  },
-  pt30: {
-    paddingTop: 30
-  },
-  pb20: {
-    paddingBottom: 20
-  },
-  pb30: {
-    paddingBottom: 30
-  },
-  pr30: {
-    paddingRight: 30
-  },
-  pl30: {
-    paddingLeft: 30
-  },
-  ph30: {
-    paddingHorizontal: 30
-  },
-  pv30: {
-    paddingVertical: 30
   },
   opacityHalf: {
     opacity: 0.5

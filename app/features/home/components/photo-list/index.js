@@ -54,7 +54,7 @@ const PhotoList = () => {
 
       <FlatList
         ref={flatListRef}
-        style={[Styles.mt10, Styles.f1]}
+        style={Styles.f1}
         data={photos}
         showsVerticalScrollIndicator={false}
         refreshControl={

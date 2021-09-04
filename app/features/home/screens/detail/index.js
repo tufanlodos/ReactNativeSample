@@ -15,7 +15,7 @@ const DetailScreen = ({ navigation = {}, route = {} }) => {
   }, []);
 
   return (
-    <SafeAreaView style={Styles.f1}>
+    <SafeAreaView style={[Styles.f1, Styles.screenHorizontalPadding]}>
       <ScrollView style={Styles.f1}>
         <ProgressiveImage url={getFlickrUrl(photo)} />
       </ScrollView>

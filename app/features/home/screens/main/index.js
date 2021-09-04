@@ -15,7 +15,7 @@ const HomeScreen = ({ navigation = {} }) => {
   }, [accountContext.state]);
 
   return (
-    <SafeAreaView style={Styles.f1}>
+    <SafeAreaView style={[Styles.f1, Styles.screenHorizontalPadding]}>
       <PhotoSearchInput />
       <PhotoList />
     </SafeAreaView>

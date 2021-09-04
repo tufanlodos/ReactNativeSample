@@ -9,7 +9,7 @@ const LoginScreen = ({ navigation }) => {
   const accountContext = useContext(AccountContext);
 
   return (
-    <SafeAreaView style={Styles.f1}>
+    <SafeAreaView style={[Styles.f1, Styles.screenHorizontalPadding]}>
       <Button
         title="Login"
         onPress={() => Controller.handleLoginSubmit(navigation, accountContext)}

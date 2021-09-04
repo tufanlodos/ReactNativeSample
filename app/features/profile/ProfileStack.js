@@ -21,7 +21,7 @@ const ProfileStack = () => (
         <Icon
           name="arrow-left"
           size={24}
-          style={Platform.OS === "ios" ? Styles.ml20 : Styles.ml10}
+          style={Platform.OS === "ios" ? Styles.ml15 : Styles.ml10}
         />
       )
     }}

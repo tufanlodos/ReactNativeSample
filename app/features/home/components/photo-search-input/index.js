@@ -12,7 +12,7 @@ function PhotoSearchInput() {
 
   return (
     <View style={[OwnStyles.container, refreshing && Styles.opacityHalf]}>
-      <View style={[Styles.f1, Styles.fdRow]}>
+      <View style={OwnStyles.inputContainer}>
         <Icon name="search" size={22} color={Colors.grey} />
         <TextInput
           disabled={refreshing}
@@ -33,10 +33,11 @@ function PhotoSearchInput() {
         />
       </View>
 
-      <View style={[Styles.f0, Styles.fdRow, Styles.jcEnd]}>
+      <View style={OwnStyles.clearContainer}>
         {keyword ? (
           <TouchableOpacity
-            style={[Styles.mr15, Styles.fdRow, Styles.algiCenter]}
+            disabled={refreshing}
+            style={OwnStyles.clearButtonContainer}
             hitSlop={Styles.hitSlop10}
             onPress={() => photoListContext.handleSearch("", photoListContext)}
           >

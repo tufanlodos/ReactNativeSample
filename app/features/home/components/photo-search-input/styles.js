@@ -6,9 +6,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: Colors.white,
-    paddingHorizontal: 20,
     paddingVertical: 15,
-    borderRadius: 6
+    borderRadius: 6,
+    marginBottom: 15
+  },
+  inputContainer: {
+    flex: 1,
+    flexDirection: "row",
+    paddingLeft: 15
   },
   searchInputStyle: {
     height: 24,
@@ -16,6 +21,16 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     color: Colors.secondaryDark,
     flex: 1
+  },
+  clearContainer: {
+    flex: 0,
+    flexDirection: "row",
+    justifyContent: "flex-end"
+  },
+  clearButtonContainer: {
+    marginRight: 15,
+    flexDirection: "row",
+    alignItems: "center"
   }
 });
 

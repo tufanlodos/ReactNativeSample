@@ -9,7 +9,7 @@ const ProfileScreen = ({ navigation }) => {
   const accountContext = useContext(AccountContext);
 
   return (
-    <SafeAreaView style={Styles.f1}>
+    <SafeAreaView style={[Styles.f1, Styles.screenHorizontalPadding]}>
       <Button
         title="Logout"
         onPress={() => Controller.handleLogoutSubmit(navigation, accountContext)}
