@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     height: 24,
     padding: 0,
     paddingLeft: 10,
-    color: Colors.secondaryDark,
+    color: Colors.secondary,
     flex: 1
   },
   clearContainer: {
