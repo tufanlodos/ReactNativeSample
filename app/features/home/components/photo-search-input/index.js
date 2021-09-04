@@ -8,7 +8,7 @@ import OwnStyles from "./styles";
 
 function PhotoSearchInput() {
   const photoListContext = useContext(PhotoListContext);
-  const { keyword, refreshing } = photoListContext.state;
+  const { keyword, refreshing, totalCount } = photoListContext.state;
 
   return (
     <View style={[OwnStyles.container, refreshing && Styles.opacityHalf]}>
@@ -19,7 +19,7 @@ function PhotoSearchInput() {
           autoCapitalize="none"
           autoCorrect={false}
           value={keyword}
-          placeholder="Search on photos"
+          placeholder={`Search in ${totalCount ? `${totalCount} ` : ""}photos`}
           style={OwnStyles.searchInputStyle}
           onChangeText={(text) => {
             if (refreshing) {

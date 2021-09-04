@@ -1,6 +1,7 @@
 import createDataContext from "./createDataContext";
 import * as PhotoService from "../api/photo";
 import defaultTexts from "../assets/data/default-texts.json";
+import apiStatuses from "../assets/data/api-statuses.json";
 import { CONSTANTS } from "../config/configurations";
 
 const initialState = {
@@ -54,13 +55,12 @@ function getPhotos(dispatch) {
         keyword
       );
 
-      if (response?.stat === "ok") {
-        // TODO ok tu di deyir
+      if (response?.stat === apiStatuses.ok) {
         dispatch({
           type: "setPhotos",
           payload: {
             photos: response?.photos?.photo ?? initialState.photos,
-            totalCount: response?.total ?? initialState.totalCount,
+            totalCount: response?.photos?.total ?? initialState.totalCount,
             reset
           }
         });
@@ -93,7 +93,7 @@ function handleSearch(dispatch) {
 
     searchWaiting = setTimeout(() => {
       searchWaiting = null;
-      photoListContext.getPhotos(true, index, count, text);
+      photoListContext.getPhotos(true, index, count, text || null);
     }, CONSTANTS.FILTER_SEARCH_DELAY_MS);
 
     callback?.();

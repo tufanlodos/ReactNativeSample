@@ -31,7 +31,7 @@ const PhotoList = () => {
   }, []);
 
   useEffect(() => {
-    scrollToTopOfFlatList();
+    scrollToTopOfFlatList(flatListRef);
   }, [keyword]);
 
   if (errorMessage) {
