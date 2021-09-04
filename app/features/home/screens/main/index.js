@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import PhotoList from "../../components/photo-list";
+import PhotoSearchInput from "../../components/photo-search-input";
 import { Context as AccountContext } from "../../../../context/AccountContext";
 import Styles from "../../../../config/styles";
-import PhotoSearchInput from "../../components/photo-search-input";
 
 const HomeScreen = ({ navigation = {} }) => {
   const accountContext = useContext(AccountContext);
@@ -15,7 +15,7 @@ const HomeScreen = ({ navigation = {} }) => {
   }, [accountContext.state]);
 
   return (
-    <SafeAreaView style={[Styles.f1, Styles.screenHorizontalPadding]}>
+    <SafeAreaView style={[Styles.f1, Styles.screenHorizontalPadding, Styles.iosNotchBalancer]}>
       <PhotoSearchInput />
       <PhotoList />
     </SafeAreaView>

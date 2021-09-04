@@ -1,5 +1,6 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import Colors from "../assets/data/color-list.json";
+import { CONSTANTS } from "./configurations";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "../lib/responsive";
 
 // TODO toparla
@@ -116,5 +117,8 @@ export default StyleSheet.create({
     bottom: 10,
     right: 10,
     left: 10
+  },
+  iosNotchBalancer: {
+    paddingVertical: Platform.OS === "ios" && CONSTANTS.hasNotch ? -30 : null
   }
 });
