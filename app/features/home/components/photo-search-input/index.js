@@ -42,7 +42,7 @@ function PhotoSearchInput() {
             onPress={() => photoListContext.handleSearch("", photoListContext)}
           >
             <View>
-              <Icon name="x" size={24} color={Colors.grey} />
+              <Icon name="x" size={24} color={Colors.secondary} />
             </View>
           </TouchableOpacity>
         ) : null}
