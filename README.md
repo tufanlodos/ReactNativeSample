@@ -13,7 +13,7 @@
 
 ## Installation
 
-- clone repository with command `git clone https://github.com/tufanlodos/CodeAssignment.git`
+- clone repository with command `git clone https://github.com/tufanlodos/ReactNativeSample.git`
 - `cd` into cloned repository
 - create a file named **.env** and provide `API_URL` and `API_KEY` keys in it. (You can use `https://www.flickr.com/` for `API_URL`)
 - run command `yarn`
